@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire - Sécurité & Hygiène</title>
+    <link rel="stylesheet" href="{% static 'examen_app/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="questionnaire.html">Questionnaire</a>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>Questionnaire d’évaluation des risques</h2>
+        <p>Veuillez remplir ce formulaire selon votre fonction :</p>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <label for="role">Vous êtes :</label>
+            <select id="role" name="role" required>
+                <option value="">-- Choisir --</option>
+                <option value="expert">Expert en SST</option>
+                <option value="travailleur">Travailleur</option>
+    
+
+            <label for="entreprise">Votre entreprise ?</label>
+            <input type="text" id="entrepeise" required>
+            <label for="nom&prenom">Votre nom et prenom ?</label>
+            <input type="text" id="nom&prenom" required>
+            
+            
+            <label for="q1">Les équipements de sécurité sont-ils disponibles ?</label>
+            <select id="q1" name="q1" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Non">Non</option> 
+            </select> 
+            <label for="q1">Les consignes sont-elles clairement affichées ?</label>
+            <select id="q2" name="q2" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Non">Oui</option>
+            </select>
+             <label for="q3">Avez-vous reçu une formation en sécurité ?</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">xxxxxxxxxxx</option>
+                <option value="Oui">xxxxxxxxxx</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">xxxxxxxxxxxxxx</option>
+                <option value="Oui">xxxxxxxxxxxxxxxx</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">xxxxxxxxxxxxxxxxxx</option>
+                <option value="Oui">xxxxxxxxxxxxxxxxxxxx</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">xxxxxxxxxxxxxxxxxxx</option>
+                <option value="Oui">xxxxxxxxxxxxxxxxxxxxxxx</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="q3">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</label>
+            <select id="q3" name="q3" required>
+                <option value="">-- Choisir --</option>
+                <option value="Oui">Oui</option>
+                <option value="Oui">Non</option>
+            </select>
+            <label for="date&heure">Selectionnez la date et l'heure de fin :</label>
+            <input type="datetime-local"id=date&heure value="{{now|date:'Y-m-d\\TH:i'}}">
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Campagne - Sécurité & Hygiène</p>
+    </footer>
+</body>
+</html>
